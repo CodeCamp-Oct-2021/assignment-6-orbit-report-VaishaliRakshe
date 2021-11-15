@@ -8,6 +8,11 @@ import { Satellite } from '../satellite';
 })
 
 export class OrbitListComponent implements OnInit {
+	satelliteType: string='Space Debris';
+	types: string[]=['Space Debris'];
+	changeColor:boolean=true;
+	alternateColor:string='red';
+	
 
   @Input() satellites: Satellite[];
   constructor() { }
