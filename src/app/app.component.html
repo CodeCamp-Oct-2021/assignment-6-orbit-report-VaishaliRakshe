@@ -1,18 +1,8 @@
 <h1>Orbit Report</h1>
-<app-orbit-list [satellites]="sourceList"></app-orbit-list>
-<!-- <app-orbit-list [satellites]="displayList"></app-orbit-list> -->
 
-<table>
-	
-	
-	<tr *ngFor ="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()" [class.stripe]="satellite.zebraStripe(satellites)">
-		<td>{{satellite.name}}</td>
-		<td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td>
-		<td>{{satellite.operational}}</td>
-		<td>{{satellite.orbitType}}</td>
-		<td>{{satellite.launchDate}}</td>
-	 </tr>
-</table>
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
+
+
 <div class="search-form">
 	Search: <input #searchTerm type="text" placeholder="Enter search term"(keyup.enter)="search(searchTerm.value);" />
 	<button class="button"(click)="search(searchTerm.value)">Search</button>

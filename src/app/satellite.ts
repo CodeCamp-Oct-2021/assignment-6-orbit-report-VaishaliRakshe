@@ -19,10 +19,8 @@ export class Satellite {
 			
 		  
    }
- 
-	zebraStripe(arr):boolean {
-		return arr.indexOf(this) % 2 === 0 && this.type.toLocaleLowerCase() !=='space debris';
-	}
+  
+	
 
 }
 
