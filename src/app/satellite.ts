@@ -15,15 +15,15 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		if (this.type.toLowerCase() === "space debris") {
-			return true;
-		} else{
-			return false;
+		return this.type.toLowerCase() === "space debris" 
+			
 		  
    }
  
-	
-}   
+	zebraStripe(arr):boolean {
+		return arr.indexOf(this) % 2 === 0 && this.type.toLocaleLowerCase() !=='space debris';
+	}
+
 }
 
 // TODO 3a: fix isSpaceDebris check

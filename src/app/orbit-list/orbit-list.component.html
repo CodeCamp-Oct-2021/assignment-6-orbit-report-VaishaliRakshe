@@ -8,7 +8,7 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-<tr *ngFor="let satellite of satellites; let i=index" [class.stripe]="i % 2==0">
+<!-- <tr *ngFor="let satellite of satellites; let i=index" [class.stripe]="i % 2==0"> -->
 <tr *ngFor ="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()" [class.stripe]="satellite.zebraStripe(satellites)">
    <td>{{satellite.name}}</td>
    <td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td>
